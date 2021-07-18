@@ -1,8 +1,9 @@
 <template>
 <div id='app' v-bind:class='backgroundPicker(weather)'>
 <main>
+  <div class='container'>
   <div class="search-box" style='margin-top: 5em;'>
-    <input type="text" class="search-bar" placeholder="Search..." v-model='query'
+    <input type="text" class="search-bar" placeholder="Enter a City, State, or Country Location" v-model='query'
     @keypress='fetchWeather'
      />
   </div>
@@ -21,7 +22,7 @@
     <div class="weather">{{weather.weather[0].main}}</div>
   </div>
   </div>
-
+  </div>
 </main>
 </div>
 </template>
@@ -144,7 +145,8 @@ main {
   display: block;
   width: 100%;
   padding: 15px;
-  
+  max-width: 1200px;
+  margin: 0 auto;
   color: #313131;
   font-size: 20px;
   appearance: none;
@@ -196,5 +198,38 @@ main {
   font-weight: 700;
   font-style: italic;
   text-shadow: 3px 6px rgba(0, 0, 0, 0.25);
+}
+.container {
+  position: absolute;
+  inset: 8%;
+}
+
+@media only screen and (max-height: 674px) {
+  .container {
+    inset: 0 8%;
+  }
+}
+
+@media only screen and (max-width: 356px) {
+  .container {
+    inset: 8% 2%;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .container {
+    transform: scale(0.75);
+    position: static;
+    inset: 0;
+  }
+
+  main {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .weather-box .temp {
+    font-size: 64px;
+  }
 }
 </style>
