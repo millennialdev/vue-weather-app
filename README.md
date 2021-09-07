@@ -1,24 +1,7 @@
-# weather
+## Vue Weather App
 
-## Project setup
-```
-npm install
-```
+Created a pretty simple weather app using Vue frontend framework.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+<a href='https://wonderful-weather-app.netlify.app' target='_blank'>Wonderful Weather App</a>
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+<img src='./src/assets/capture.jpg' />
